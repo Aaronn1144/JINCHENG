@@ -1,6 +1,6 @@
 
 import React, { useEffect, useState } from 'react';
-import { X, Check, Activity, Shield, Battery, Wind, Cpu, Lightbulb, Radio, Play, AlertTriangle, FileText } from 'lucide-react';
+import { X, Check, Activity, Shield, Battery, Wind, Cpu, Lightbulb, Radio, Play, AlertTriangle, FileText, Phone } from 'lucide-react';
 import { Product } from '../types';
 
 interface ProductModalProps {
@@ -79,7 +79,7 @@ const ProductModal: React.FC<ProductModalProps> = ({ product, onClose }) => {
           
           <div className="flex flex-col lg:flex-row">
             
-            {/* Left Column: Media Gallery */}
+            {/* Left Column: Media Gallery & Actions */}
             <div className="w-full lg:w-3/5 bg-slate-900/50 p-4 md:p-8 flex flex-col justify-start border-b lg:border-b-0 lg:border-r border-white/5">
               
               {/* Main Media Viewer */}
@@ -146,6 +146,39 @@ const ProductModal: React.FC<ProductModalProps> = ({ product, onClose }) => {
                   </button>
                 ))}
               </div>
+
+              {/* Action Buttons (PDF & Contact) */}
+              <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                 {/* PDF Download Button */}
+                 {details.pdf ? (
+                    <a 
+                      href={details.pdf}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center gap-2 px-4 py-3 bg-slate-800 hover:bg-slate-700 text-white rounded-xl font-bold transition-all border border-white/10 hover:border-blue-500/30 group"
+                    >
+                      <FileText className="w-5 h-5 text-blue-400 group-hover:text-white transition-colors" />
+                      <span className="text-sm">下载完整参数表 (PDF)</span>
+                    </a>
+                 ) : (
+                    <button 
+                      disabled
+                      className="flex items-center justify-center gap-2 px-4 py-3 bg-slate-800/50 text-gray-600 rounded-xl font-bold cursor-not-allowed border border-white/5"
+                    >
+                      <FileText className="w-5 h-5" />
+                      <span className="text-sm">参数表暂未上传</span>
+                    </button>
+                 )}
+
+                 {/* Contact Sales Button */}
+                 <a 
+                    href="tel:19833137881"
+                    className="flex items-center justify-center gap-2 px-4 py-3 bg-blue-600 hover:bg-blue-500 text-white rounded-xl font-bold transition-all shadow-lg shadow-blue-600/25 hover:shadow-blue-600/40 hover:-translate-y-0.5"
+                 >
+                    <Phone className="w-5 h-5 fill-current" />
+                    <span className="text-sm">联系销售购买</span>
+                 </a>
+              </div>
             </div>
 
             {/* Right Column: Product Info */}
@@ -198,29 +231,6 @@ const ProductModal: React.FC<ProductModalProps> = ({ product, onClose }) => {
                     </div>
                   </div>
                 ))}
-             </div>
-
-             {/* Footer Actions */}
-             <div className="mt-16 flex justify-center">
-               {details.pdf ? (
-                  <a 
-                    href={details.pdf}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 px-10 py-4 bg-blue-600 hover:bg-blue-500 text-white rounded-full font-bold transition-all shadow-lg shadow-blue-600/30 hover:shadow-blue-600/50 transform hover:-translate-y-1"
-                  >
-                    <FileText className="w-5 h-5" />
-                    下载完整参数表 (PDF)
-                  </a>
-               ) : (
-                  <button 
-                    disabled
-                    className="flex items-center gap-2 px-10 py-4 bg-slate-800 text-gray-500 rounded-full font-bold cursor-not-allowed border border-white/5"
-                  >
-                    <FileText className="w-5 h-5" />
-                    参数表暂未上传
-                  </button>
-               )}
              </div>
           </div>
 
