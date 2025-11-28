@@ -41,4 +41,5 @@ export interface ProductDetails {
   sections: ProductSection[];
   video?: string;
   images?: string[];
+  pdf?: string; // Add PDF field
 }

@@ -1,5 +1,6 @@
+
 import React, { useEffect, useState } from 'react';
-import { X, Check, Activity, Shield, Battery, Wind, Cpu, Lightbulb, Radio, Play, AlertTriangle } from 'lucide-react';
+import { X, Check, Activity, Shield, Battery, Wind, Cpu, Lightbulb, Radio, Play, AlertTriangle, FileText } from 'lucide-react';
 import { Product } from '../types';
 
 interface ProductModalProps {
@@ -201,9 +202,25 @@ const ProductModal: React.FC<ProductModalProps> = ({ product, onClose }) => {
 
              {/* Footer Actions */}
              <div className="mt-16 flex justify-center">
-                <button className="px-10 py-4 bg-blue-600 hover:bg-blue-500 text-white rounded-full font-bold transition-all shadow-lg shadow-blue-600/30 hover:shadow-blue-600/50 transform hover:-translate-y-1">
-                  下载完整参数表 (PDF)
-                </button>
+               {details.pdf ? (
+                  <a 
+                    href={details.pdf}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 px-10 py-4 bg-blue-600 hover:bg-blue-500 text-white rounded-full font-bold transition-all shadow-lg shadow-blue-600/30 hover:shadow-blue-600/50 transform hover:-translate-y-1"
+                  >
+                    <FileText className="w-5 h-5" />
+                    下载完整参数表 (PDF)
+                  </a>
+               ) : (
+                  <button 
+                    disabled
+                    className="flex items-center gap-2 px-10 py-4 bg-slate-800 text-gray-500 rounded-full font-bold cursor-not-allowed border border-white/5"
+                  >
+                    <FileText className="w-5 h-5" />
+                    参数表暂未上传
+                  </button>
+               )}
              </div>
           </div>
 

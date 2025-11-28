@@ -207,6 +207,7 @@ export const DRONE_DATA: MainCategory = {
           details: {
             intro: '采用军工级碳纤维一体化成型工艺，相比市面上普通复合材料机身，强度提升40%，重量降低25%。在强风（≤12m/s）环境下仍能保持悬停稳定性，且具备IP54级防尘防水能力，适应雨雪、沙尘等复杂作业场景。',
             video: '/videos/l800-demo.mp4',
+            pdf: '/pdfs/l800-specs.pdf', // PDF 下载路径配置
             images: [
               '/images/l800-1.jpg',
               '/images/l800-2.jpg',
