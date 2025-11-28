@@ -1,4 +1,3 @@
-
 import { MainCategory } from './types';
 
 export const NAVIGATION_ITEMS = [
@@ -22,11 +21,11 @@ export const DRONE_DATA: MainCategory = {
           id: 'fpv-5',
           name: '5寸 FPV 竞速/花飞',
           description: '极致灵动，专为高速穿梭与花式飞行设计。',
-          image: '/images/fpv-5-1.jpg', // 请上传: public/images/fpv-5-1.jpg
+          image: '/images/fpv-5-1.jpg',
           specs: ['轴距: 225mm', '续航: 5-8min', '极速: 180km/h'],
           details: {
             intro: '专为极限操控打造的5寸全能平台。采用高强度碳纤维机身，完美平衡重量与刚性。无论是赛道竞速还是废墟穿梭，都能提供行云流水般的飞行体验。支持模拟/数字高清图传，捕捉每一个惊心动魄的瞬间。',
-            video: '/videos/fpv-5-demo.mp4', // 请上传: public/videos/fpv-5-demo.mp4
+            video: '/videos/fpv-5-demo.mp4',
             images: [
               '/images/fpv-5-1.jpg',
               '/images/fpv-5-2.jpg',
@@ -64,11 +63,11 @@ export const DRONE_DATA: MainCategory = {
           id: 'fpv-7',
           name: '7寸 FPV 远航',
           description: '兼顾速度与载重，适合中远距离山岳飞行。',
-          image: '/images/fpv-7-1.jpg', // 请上传: public/images/fpv-7-1.jpg
+          image: '/images/fpv-7-1.jpg',
           specs: ['轴距: 315mm', '续航: 15-20min', '最大载重: 1.5kg'],
           details: {
             intro: '为远方而生。7寸机架提供了更充裕的电池空间与更高效的升力特性，是山岳冲浪与长距离追拍的理想选择。在保持灵活性的同时，大幅提升了抗风性能与续航能力。',
-            video: '/videos/fpv-7-demo.mp4', // 请上传: public/videos/fpv-7-demo.mp4
+            video: '/videos/fpv-7-demo.mp4',
             images: [
               '/images/fpv-7-1.jpg',
               '/images/fpv-7-2.jpg',
@@ -106,7 +105,7 @@ export const DRONE_DATA: MainCategory = {
           id: 'fpv-11',
           name: '11寸 FPV 电影机',
           description: '专业影视航拍平台，支持电影机搭载。',
-          image: '/images/fpv-11-1.jpg', // 请上传: public/images/fpv-11-1.jpg
+          image: '/images/fpv-11-1.jpg',
           specs: ['轴距: 500mm', '有效载荷: 3kg', '抗风等级: 6级'],
           details: {
             intro: 'Cinelifter 级别的重型穿越机。专为搭载 RED Komodo、BMPCC 等小型电影机设计。X8 同轴八桨布局或大尺寸四轴布局，确保了在搭载昂贵摄影器材时的绝对安全与动力冗余。',
@@ -207,7 +206,7 @@ export const DRONE_DATA: MainCategory = {
           details: {
             intro: '采用军工级碳纤维一体化成型工艺，相比市面上普通复合材料机身，强度提升40%，重量降低25%。在强风（≤12m/s）环境下仍能保持悬停稳定性，且具备IP54级防尘防水能力，适应雨雪、沙尘等复杂作业场景。',
             video: '/videos/l800-demo.mp4',
-            pdf: '/pdfs/l800-specs.pdf', // PDF 下载路径配置
+            pdf: '/pdfs/l800-specs.pdf',
             images: [
               '/images/l800-1.jpg',
               '/images/l800-2.jpg',
@@ -245,20 +244,19 @@ export const DRONE_DATA: MainCategory = {
                   { label: '重量', value: '380±10g' },
                   { label: '功率', value: '1500W Max' },
                   { label: '输入', value: '360-420Vdc' },
-                  { label: '输出', value: '22.5-26.25Vdc' },
-                  { label: '变比', value: '16:1 固定比' },
-                  { label: '能量转化率', value: '92% (行业平均 85%)' },
+                  { label: '输出', value: '22.5-26.25vdc (16:1固定比)' },
+                  { label: '能量转化率', value: '92% (行业平均85%)' }
                 ]
               },
               {
                 title: '系留地面端',
                 description: '智能变频电源系统',
                 specs: [
-                  { label: '类型', value: '2kW 智能变频电源' },
-                  { label: '输入', value: '220Vac (2.2KW, 10A)' },
+                  { label: '功率', value: '2kw Max' },
+                  { label: '输入', value: '220vac (2.2KW, 配10A插头)' },
                   { label: '输出', value: '0-420Vdc 电压可调' },
                   { label: '线长', value: '50m 6A Max' },
-                  { label: '保护机制', value: '过压/过流/短路 三重防护' },
+                  { label: '保护机制', value: '过压/过流/短路 三重防护' }
                 ]
               },
               {
@@ -266,12 +264,11 @@ export const DRONE_DATA: MainCategory = {
                 description: 'COB集成光源 + 相变散热',
                 specs: [
                   { label: '光通量', value: '20万流明' },
-                  { label: '散热技术', value: '相变散热 + COB' },
                   { label: '重量', value: '200g' },
                   { label: '尺寸', value: '200*35*25mm' },
                   { label: '功率', value: '80W (满载150W)' },
                   { label: '寿命', value: '50000 小时' },
-                  { label: '温控', value: '60℃起保护 / >85℃熄灭' },
+                  { label: '自动温控', value: '60℃起保护 / >85℃熄灭' }
                 ]
               },
               {
@@ -281,7 +278,7 @@ export const DRONE_DATA: MainCategory = {
                   { label: '线长', value: '50 米' },
                   { label: '内芯材质', value: '凯夫拉纤维编织' },
                   { label: '外层材质', value: '耐候性聚氨酯' },
-                  { label: '特性', value: '解决低温易脆/高温软化' },
+                  { label: '特性', value: '解决低温易脆/高温软化' }
                 ]
               },
               {
@@ -289,87 +286,130 @@ export const DRONE_DATA: MainCategory = {
                 description: 'FreeRTOS系统 + LVGL界面',
                 specs: [
                   { label: '通道', value: '16 通道 (3ms 响应)' },
-                  { label: '屏幕', value: '2.8寸 LCD (320*240)' },
                   { label: '主频', value: '288MHz' },
+                  { label: '屏幕', value: '2.8寸 LCD (320*240)' },
                   { label: '交互', value: '2个VR旋钮 / 2个VR开关' },
-                  { label: '回传', value: '内置数传 (电压/RSSI/位置)' },
+                  { label: '回传', value: '内置数传 (电压/RSSI/位置)' }
                 ]
               }
             ]
           }
-        }
+        },
       ]
     },
     {
       id: 'fixed-wing',
       title: '固定翼',
-      products: [],
-      isEmpty: true
-    },
-    {
-      id: 'vtol',
-      title: '垂起固定翼',
       products: [
         {
-          id: 'jade-rabbit',
-          name: '玉兔 (Jade Rabbit)',
-          description: '垂直起降，长航时巡检利器。像兔子一样灵动，像鹰一样翱翔。',
-          image: '/images/jade-rabbit-1.jpg', // 请上传: public/images/jade-rabbit-1.jpg
-          specs: ['巡航速度: 90km/h', '航时: 120min', '翼展: 2.4m'],
+          id: 'zw05-loitering',
+          name: 'ZW05 巡飞弹',
+          description: '高性能气动弹射固定翼无人机，专为高速机动飞行与精确打击任务设计。采用抗高过载翼型与全碳纤维蜂窝复合材料，支持5kg有效载荷。',
+          image: '/images/zw05-1.jpg',
+          specs: ['有效载荷: 5kg', '最大航时: 120min+', '气动弹射', '抗风: 6级'],
           details: {
-            intro: '集多旋翼的起降便利性与固定翼的长航时优势于一身。采用复合翼布局，全自动垂直起降，无需跑道，轻松应对复杂地形。高效率气动外形设计，实现超长续航与静音巡航。',
-            video: '/videos/jade-rabbit-demo.mp4',
-            images: ['/images/jade-rabbit-1.jpg', '/images/jade-rabbit-2.jpg'],
+            intro: 'ZW05 是一款可搭载5Kg有效载荷的固定翼无人机，采用气动弹射架发射。机翼翼型采用抗高过载设计，主体采用碳纤维、蜂窝复合材料，能满足高速机动飞行的要求。该平台具备极高的战术灵活性与生存能力。',
+            video: '/videos/zw05-demo.mp4',
+            images: [
+              '/images/zw05-1.jpg',
+              '/images/zw05-2.jpg',
+              '/images/zw05-3.jpg'
+            ],
             features: [
-              { title: '最大航时', value: '120 min' },
-              { title: '任务载荷', value: '1.5 kg' },
-              { title: '控制半径', value: '30 km' },
-              { title: '起降方式', value: 'VTOL' },
+              { title: '有效载荷', value: '5 kg' },
+              { title: '续航时间', value: '> 120 min' },
+              { title: '最大航速', value: '120 km/h' },
+              { title: '最大俯冲', value: '35°' }
             ],
             sections: [
               {
-                title: '性能指标',
+                title: '飞行性能',
                 specs: [
-                  { label: '翼展', value: '2400mm' },
-                  { label: '机身长度', value: '1150mm' },
-                  { label: '最大起飞重量', value: '12.5 kg' },
-                  { label: '巡航速度', value: '18-25 m/s' }
+                  { label: '工作航时', value: '> 120min (5000g有效载荷)' },
+                  { label: '最大航速', value: '120 KM/h' },
+                  { label: '抗风能力', value: '6 级' },
+                  { label: '最大俯冲角度', value: '35°' },
+                  { label: '工作温度', value: '-10℃ ~ 50℃' }
                 ]
               },
               {
-                title: '任务能力',
+                title: '机身参数',
                 specs: [
-                  { label: '抗风能力', value: '6级 (起降4级)' },
-                  { label: '升限', value: '4500m' },
-                  { label: '环境温度', value: '-20℃ ~ 50℃' },
-                  { label: '兼容吊舱', value: '可见光 / 红外 / 激光雷达' }
+                  { label: '材质', value: '碳纤维，芳纶蜂窝，EPO' },
+                  { label: '翼展', value: '2000 mm' },
+                  { label: '机身长度', value: '1766 mm' },
+                  { label: '起飞重量', value: '21 Kg' },
+                  { label: '驱动方式', value: '电驱动 (Electric drive)' }
+                ]
+              },
+              {
+                title: '任务配置',
+                specs: [
+                  { label: '导航方式', value: '卫星导航' },
+                  { label: '发射方式', value: '气动弹射 (Pneumatic launcher)' },
+                  { label: '载荷能力', value: '5 Kg' }
                 ]
               }
             ]
           }
+        },
+        {
+          id: 'vtol-rabbit',
+          name: '玉兔 VTOL',
+          description: '垂起固定翼无人机，结合了多旋翼的起降便利性与固定翼的长航时特性。',
+          image: '/images/jade-rabbit-1.jpg',
+          specs: ['垂直起降', '长航时', '模块化设计'],
+          details: {
+            intro: '玉兔系列 VTOL 专为测绘、巡检等行业应用打造。无需跑道，一键垂直起降，空中自动转换为固定翼平飞模式，大幅提升作业效率。',
+            video: '/videos/jade-rabbit-demo.mp4',
+            images: ['/images/jade-rabbit-1.jpg'],
+            features: [
+              { title: '起降方式', value: 'VTOL' },
+              { title: '续航', value: '90-120 min' },
+              { title: '巡航速度', value: '75 km/h' },
+              { title: '任务载荷', value: '1-2 kg' }
+            ],
+            sections: [
+               {
+                 title: '基本参数',
+                 specs: [
+                   { label: '翼展', value: '2400mm' },
+                   { label: '材质', value: 'EPO + 碳纤维' },
+                   { label: '动力', value: '纯电' },
+                   { label: '控制半径', value: '15-30 km' }
+                 ]
+               }
+            ]
+          }
         }
       ]
-    }
+    },
+    {
+      id: 'vtol',
+      title: '垂起固定翼',
+      products: [],
+      isEmpty: true
+    },
   ]
 };
 
 export const AIRFRAME_DATA = {
-  title: '高性能机架',
-  description: '金成航空自主研发碳纤维机架，为行业应用提供坚实骨骼。',
+  title: '高性能碳纤维机架',
+  description: '金成航空专注于工业级无人机机架的研发与制造。我们采用进口东丽 T700/T800 碳纤维材料，配合航空铝合金 CNC 精密加工，打造出兼具极轻重量与超高强度的飞行平台。支持来图定制与 ODM 开发。',
   features: [
-    { title: '航空级碳纤维', desc: '采用T700/T800高模量碳纤维，强度提升40%。' },
-    { title: '模块化设计', desc: '快拆结构，便于运输与快速维护。' },
-    { title: '气动优化', desc: '经风洞测试的气动外形，降低风阻，提升续航。' }
+    { title: '军工级材料', desc: '全系采用高模量碳纤维，强度提升40%，重量减轻30%。' },
+    { title: '结构优化', desc: '经过风洞模拟优化的气动外形，有效降低风阻，提升续航。' },
+    { title: '模块化设计', desc: '快拆结构设计，便于运输与维护，支持多种任务载荷快速切换。' }
   ]
 };
 
 export const LEASING_DATA = {
-  title: '租赁与服务',
-  description: '无需重资产投入，即可享受顶尖的无人机技术服务。',
+  title: '专业租赁与服务',
+  description: '不仅提供产品，更提供全方位的飞行解决方案。从设备租赁到技术支持，助力您的业务腾飞。',
   services: [
-    { title: '影视航拍', icon: 'camera', desc: '提供全套FPV及航拍设备与飞手服务。' },
-    { title: '电力巡检', icon: 'zap', desc: '高压线路自动化巡检方案租赁。' },
-    { title: '应急救援', icon: 'life-buoy', desc: '突发事件现场的照明与侦查支持。' },
-    { title: '测绘建模', icon: 'map', desc: '高精度航测无人机及后处理服务。' },
+    { icon: 'camera', title: '影视航拍', desc: '提供全套穿越机/航拍机租赁，配备专业飞手，捕捉极致镜头。' },
+    { icon: 'zap', title: '电力巡检', desc: '搭载红外热成像/激光雷达设备，提供高效的电网巡检服务。' },
+    { icon: 'life-buoy', title: '应急救援', desc: '系留无人机照明/喊话/物资投送，24小时随时待命。' },
+    { icon: 'map', title: '测绘建模', desc: '高精度正射/倾斜摄影，快速生成城市三维模型。' }
   ]
 };
