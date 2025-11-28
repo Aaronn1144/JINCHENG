@@ -63,16 +63,21 @@ export const DRONE_DATA: MainCategory = {
           id: 'tethered-light',
           name: '应急系留照明无人机',
           description: '大功率空中照明解决方案，20万流明亮度。配备专用地面电源箱实现无限续航，包含系留线缆与智能收放系统，专为应急救援与夜间作业设计。',
-          image: 'https://picsum.photos/id/464/800/600',
+          image: '/images/l800-1.jpg', // 使用本地上传的主图
           specs: ['滞空时间: 24h+', '照明范围: 3000㎡', '亮度: 20万流明', '防护: IP54'],
           details: {
             intro: '采用军工级碳纤维一体化成型工艺，相比市面上普通复合材料机身，强度提升40%，重量降低25%。在强风（≤12m/s）环境下仍能保持悬停稳定性，且具备IP54级防尘防水能力，适应雨雪、沙尘等复杂作业场景。',
-            video: 'https://storage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4',
+            
+            // 引用 public/videos/l800-demo.mp4
+            video: '/videos/l800-demo.mp4', 
+
+            // 引用 public/images/ 下的图片
             images: [
-              'https://picsum.photos/id/464/1200/800', // Main shot
-              'https://picsum.photos/id/452/1200/800', // Action shot
-              'https://picsum.photos/id/203/1200/800', // Detail shot
-              'https://picsum.photos/id/514/1200/800', // Night shot
+              '/images/l800-1.jpg',
+              '/images/l800-2.jpg',
+              '/images/l800-3.jpg',
+              '/images/l800-4.jpg',
+              '/images/l800-top-detail.jpg', // 新增的俯视特写图
             ],
             features: [
               { title: '最大亮度', value: '200,000 lm' },
